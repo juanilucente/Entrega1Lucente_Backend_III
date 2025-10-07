@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 function ensureAuthenticated(req, res, next){
-  // allow passport session or JWT in Authorization header
+  
   if(req.isAuthenticated && req.isAuthenticated()) return next();
   const auth = req.headers.authorization;
   if(auth && auth.startsWith('Bearer ')){

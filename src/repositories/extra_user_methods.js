@@ -1,4 +1,4 @@
-// Extra helper methods added to the repository for reset token lookup
+
 const User = require('../models/User');
 const UserRepository = require('./UserRepository');
 

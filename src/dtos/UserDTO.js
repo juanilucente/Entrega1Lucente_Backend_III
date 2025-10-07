@@ -1,4 +1,4 @@
-// DTO to control what is sent out for a user
+
 class UserDTO {
   constructor({ _id, firstName, lastName, email, role, createdAt }){
     this.id = _id;

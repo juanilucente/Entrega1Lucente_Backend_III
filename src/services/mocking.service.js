@@ -3,7 +3,7 @@ const { Types } = require('mongoose');
 
 const saltRounds = 10;
 
-// simple random helper without external deps
+
 function randInt(min, max){ return Math.floor(Math.random()*(max-min+1))+min; }
 
 function sample(arr){ return arr[randInt(0, arr.length-1)]; }
@@ -22,7 +22,7 @@ async function generateUsers(count = 50){
     const { firstName, lastName } = generateNamePair(i+1);
     const email = `${firstName.toLowerCase()}.${lastName.toLowerCase()}${i+1}@example.com`;
     const password = await bcrypt.hash('coder123', saltRounds);
-    const role = (Math.random() < 0.85) ? 'user' : 'admin'; // mostly users
+    const role = (Math.random() < 0.85) ? 'user' : 'admin'; 
     const user = {
       _id: Types.ObjectId(),
       firstName,

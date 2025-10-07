@@ -18,7 +18,7 @@ exports.requestPasswordReset = async (req, res) => {
   try {
     const { email } = req.body;
     const user = await UserRepository.findByEmail(email);
-    if(!user) return res.status(200).json({ ok: true }); // don't reveal existence
+    if(!user) return res.status(200).json({ ok: true }); 
     const token = crypto.randomBytes(32).toString('hex');
     await UserRepository.updateById(user._id, { resetToken: token });
     await sendResetEmail(email, token);

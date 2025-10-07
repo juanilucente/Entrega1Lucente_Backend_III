@@ -8,7 +8,7 @@ const ticketRoutes = require('./routes/ticket.routes');
 const mocksRoutes = require('./routes/mocks.router');
 const petRoutes = require('./routes/pet.routes');
 
-require('./config/passport'); // passport strategies
+require('./config/passport'); 
 
 const app = express();
 app.use(express.json());

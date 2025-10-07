@@ -27,7 +27,7 @@ class UserRepository {
   }
 
   static async insertMany(arr){
-    // arr may contain _id as ObjectId or string; let mongoose handle it
+    
     return User.insertMany(arr);
   }
 }
